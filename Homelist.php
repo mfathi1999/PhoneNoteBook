@@ -11,7 +11,55 @@
     <title>Hello, world!</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    
+    <div class="jumbotron">
+        <div class="container">
+            <h1>دفترچه تلفن من</h1>
+            <p>ذخیره مخاطبان بدون محدودیت</p>
+        </div>
+    </div>
+    <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <div class="container-fluid bg-info text-white">
+        <h1>خوش آمدید</h1>
+        <!---Connecting to MySql! -->
+
+        <?php
+            $servername = "localhost";
+            $database = "Contactdb";
+            $username = "root";
+            $password = "";
+
+
+            $conn = mysqli_connect($servername,$username,$password,$database);
+
+            if ($conn->connect_error) {
+                die("Connection failed: " . $conn->connect_error);
+                }
+            else{
+                echo "Connected successfully";
+                
+                mysqli_close($conn);
+            }
+                
+    
+        ?>
+
+
+
+
+
+
+        </div>
+    </div>
+    <div class="col-md-2"></div>
+
+    </div>
+
+
+
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
